@@ -1,19 +1,19 @@
-#include <unistd.h>
-#include "main.h"
+#include "holberton.h"
 
 /**
- * print_alphabet - This function prints the alphabet in lowercase
+ * print_alphabet - function to print alphabet in lower case using holberton.h
  * followed by a new line
+ *
+ * Return: Void
  */
+
 void print_alphabet(void)
 {
-	int ch;
+char a;
 
-	for (ch = 'a'; ch <= 'z'; ch++)
-	{
-		_putchar(ch);
-	}
-
-	_putchar('\n');
-
+for (a = 'a'; a <= 'z'; alpha++)
+{
+_putchar(a);
+}
+_putchar('\n');
 }
