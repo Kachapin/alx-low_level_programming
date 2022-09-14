@@ -8,7 +8,7 @@
  * Return: void
  */
 
-void ()
+char print_alphabet(void)
 {
 	int i;
 
