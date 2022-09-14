@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 #include "main.h"
 
 /**
@@ -7,7 +8,7 @@
  * Return: void
  */
 
-void print_alphabet(void)
+void print_alphabet()
 {
 	int i;
 
