@@ -1,32 +1,39 @@
 #include "main.h"
+#include "stdio.h"
 /**
- * reverse_array - a function that reverses the
- *                content of an array of integers
+ * leet - a function that encodes a string into 1337
  *
- * @a: pointer to int array
- * @n: is the number of elements to swap
+ * @s: string input
  *
- * Return: nothing
+ * Return: @s
 */
 
-void reverse_array(int *a, int n)
+char *leet(char *s)
 {
-	int temp, s, e;
+	int i, c = 0;
+	int sl[] = {97, 101, 111, 116, 108};
+	int ul[] = {65, 69, 79, 84, 76};
+	int n[] = {52, 51, 48, 55, 49};
 
-	s = 0;
-	e = n - 1;
-	/**
-	 * set value in array a in temp
-	 * then place the last array in
-	 * the first array then place
-	 * value in temp to last array
-	*/
-	while (s < e)
+	/*iterate values in array s*/
+	while (s[c] != '\0')
 	{
-		temp = a[s];
-		a[s] = a[e];
-		a[e] = temp;
-		s++;
-		e--;
+		/**
+		 * loop through array value five times
+		 * to check if the value is equal to
+		 * any small letter in array sl or
+		 * upper letter in array ul and if it
+		 * is replace it with the value in array n
+		*/
+		for (i = 0; i < 5; i++)
+		{
+			if (s[c] == sl[i] || s[c] == ul[i])
+			{
+				s[c] = n[i];
+				break;
+			}
+		}
+		c++;
 	}
+	return (s);
 }
