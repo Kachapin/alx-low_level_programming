@@ -1,39 +1,29 @@
-i#include "main.h"
-
+#include "main.h"
 /**
- *
- * *_memcpy -  function that copies memory area
- *
- * *
- *
- * *@dest: buffer to be copied to
- *
- * *@src: buffer to copy
- *
- * *@n: number of bytes to copy
- *
- * *
- *
- * *Return: dest
- *
- * */
-
-char *_memcpy(char *dest, char *src, unsigned int n)
-
+*_strncat - concatenate string
+*
+*@dest: string parameter
+*
+*@src: string parameter
+*
+*@n: number of bytes
+*
+*Return: concatenated string
+*/
+char *_strncat(char *dest, char *src, int n)
 {
+	int i, j, counter;
 
-		unsigned int i;
+	counter = 0;
+	for (i = 0; *(dest + i) != '\0'; i++)
+	{
+	}
 
-
-
-			for (i = 0; i < n; i++)
-
-					{
-
-								dest[i] = src[i];
-
-									}
-
-				return (dest);
-
+	for (j = 0; counter < n && *(src + j) != '\0'; j++)
+	{
+		counter++;
+		*(dest + i) = *(src + j);
+		i++;
+	}
+	return (dest);
 }

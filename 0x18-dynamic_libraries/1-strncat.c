@@ -1,57 +1,19 @@
-lude "main.h"
-
+#include "main.h"
 /**
- *
- * *_strncat - concatenate string
- *
- * *
- *
- * *@dest: string parameter
- *
- * *
- *
- * *@src: string parameter
- *
- * *
- *
- * *@n: number of bytes
- *
- * *
- *
- * *Return: concatenated string
- *
- * */
-
-char *_strncat(char *dest, char *src, int n)
-
+*_isdigit - checks if it is a digit
+*
+*@c: parameter integer to test
+*
+*Return: 1 if its )-9 else 0
+*/
+int _isdigit(int c)
 {
-
-		int i, j, counter;
-
-
-
-			counter = 0;
-
-				for (i = 0; *(dest + i) != '\0'; i++)
-
-						{
-
-								}
-
-
-
-					for (j = 0; counter < n && *(src + j) != '\0'; j++)
-
-							{
-
-										counter++;
-
-												*(dest + i) = *(src + j);
-
-														i++;
-
-															}
-
-						return (dest);
-
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

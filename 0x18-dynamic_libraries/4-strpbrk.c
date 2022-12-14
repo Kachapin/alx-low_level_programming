@@ -1,83 +1,19 @@
 #include "main.h"
-
 /**
- *
- * *_strpbrk - locates the first occurrence in the string s
- *
- * *of any of the bytes in the string accept
- *
- * *
- *
- * *@s: string to search
- *
- * *@accept: string to search in
- *
- * *
- *
- * *Return: pointer to the byte in s that matches one of the bytes in accept
- *
- * */
-
-char *_strpbrk(char *s, char *accept)
-
+*_isalpha - determines is character is alpha
+*
+*@c: character to be determined
+*
+*Return: 1 if alpha, 0 anything else
+*/
+int _isalpha(int c)
 {
-
-		int boolean, j;
-
-
-
-			boolean = 1;
-
-				while (*s)
-
-						{
-
-									j = 0;
-
-											while (*(accept + j))
-
-														{
-
-																		if (*s == *(accept + j))
-
-																						{
-
-																											boolean = 0;
-
-																															break;
-
-																																		}
-
-																					j++;
-
-																							}
-
-													if (boolean == 0)
-
-																{
-
-																				break;
-
-																						}
-
-															s++;
-
-																}
-
-					if (*s != '\0')
-
-							{
-
-										return (s);
-
-											}
-
-						else
-
-								{
-
-											return ('\0');
-
-												}
-
+	if ((c > 96 && c < 123) || (c > 64 && c < 91))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
